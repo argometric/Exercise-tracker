@@ -17,11 +17,11 @@ const Exercise = props => (
     <td>
       <Link to={"/edit/"+props.exercise._id}> <button className="btn btn-outline-dark"><FontAwesomeIcon
               icon={faPencilAlt}
-              mask={faCircle} size="2x"
+              mask={faCircle} size="lg"
               transform="shrink-5"
             /></button></Link>  <button className="btn btn-outline-dark" onClick={() => { props.deleteExercise(props.exercise._id) }}><FontAwesomeIcon
             icon={faTrash}
-            mask={faCircle} size="2x"
+            mask={faCircle} size="lg"
             transform="shrink-5"
           /></button>
     </td>
