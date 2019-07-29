@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+
+
 
 const Exercise = props => (
   <tr>
@@ -9,7 +15,15 @@ const Exercise = props => (
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.exercise._id}> <button className="btn btn-outline-dark">edit</button></Link> | <button className="btn btn-outline-dark" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</button>
+      <Link to={"/edit/"+props.exercise._id}> <button className="btn btn-outline-dark"><FontAwesomeIcon
+              icon={faPencilAlt}
+              mask={faCircle} size="2x"
+              transform="shrink-5"
+            /></button></Link>  <button className="btn btn-outline-dark" onClick={() => { props.deleteExercise(props.exercise._id) }}><FontAwesomeIcon
+            icon={faTrash}
+            mask={faCircle} size="2x"
+            transform="shrink-5"
+          /></button>
     </td>
   </tr>
 )
