@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import TimeAgo from 'react-timeago'
 
 
 
@@ -79,6 +80,8 @@ export default class ExercisesList extends Component {
           { this.exerciseList() }
         </tbody>
       </table>
+      {/* TODO fix static date */}
+      Last Log: <TimeAgo date="July 29, 2019" />
     </div>
     );
   }
