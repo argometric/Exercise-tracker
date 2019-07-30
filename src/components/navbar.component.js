@@ -7,7 +7,7 @@ import { faCircle } from "@fortawesome/free-solid-svg-icons";
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
+      <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
         <div className="container">
           <Link to="/" className="navbar-brand">
             Exercise Tracker{" "}

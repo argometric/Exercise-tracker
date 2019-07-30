@@ -9,17 +9,17 @@ import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 
 const Exercise = props => (
-  <tr>
+  <tr className="table-light">
     <td>{props.exercise.username}</td>
     <td>{props.exercise.description}</td>
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.exercise._id}> <button className="btn btn-outline-dark"><FontAwesomeIcon
+      <Link to={"/edit/"+props.exercise._id}> <button className="btn btn-outline-primary"><FontAwesomeIcon
               icon={faPencilAlt}
               mask={faCircle} size="lg"
               transform="shrink-5"
-            /></button></Link>  <button className="btn btn-outline-dark" onClick={() => { props.deleteExercise(props.exercise._id) }}><FontAwesomeIcon
+            /></button></Link>  <button className="btn btn-outline-primary" onClick={() => { props.deleteExercise(props.exercise._id) }}><FontAwesomeIcon
             icon={faTrash}
             mask={faCircle} size="lg"
             transform="shrink-5"
@@ -65,8 +65,8 @@ export default class ExercisesList extends Component {
     return (
       <div>
       <h3>Logged Exercises</h3>
-      <table className="table">
-        <thead className="thead-light">
+      <table className="table table-hover">
+        <thead className="thead-dark">
           <tr>
             <th>Username</th>
             <th>Description</th>
